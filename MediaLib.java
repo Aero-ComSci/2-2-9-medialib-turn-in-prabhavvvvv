@@ -3,30 +3,24 @@
  */
 public class MediaLib
 {
-  public static String owner = "Prabhav Yeddanapudi";
+  public static String owner = "PLTW";
   
-  private static int NumEntries;
-  private static int NumBooks;
-  private static int NumMovies;
-  private static int NumSongs;
-  private String lastModified;
+  private static int numEntries;
+  private static int numBooks;
+  private static int numMovies;
+  private static int numSongs;
   
   private Book book;
   private Movie movie;
   private Song song;
-  
-  public MediaLib() {
-    lastModified = DateTime.getTime();
-  }
   
   public void addBook(Book b)
   {
     if (book == null)
     {
       book = b;
-      NumEntries++;
-      NumBooks++;
-      lastModified = DateTime.getTime();
+      numEntries++;
+      numBooks++;
     } 
     else
       System.out.println("Cannot add a new book: A book already exists");
@@ -37,9 +31,8 @@ public class MediaLib
     if (movie == null)
     {
       movie = m;
-      NumEntries++;
-      NumMovies++;
-      lastModified = DateTime.getTime();
+      numEntries++;
+      numMovies++;
     }
     else
       System.out.println("Cannot add a new movie: A movie already exists");
@@ -50,9 +43,8 @@ public class MediaLib
     if (song == null)
     {
       song = s;
-      NumEntries++;
-      NumSongs++;
-      lastModified = DateTime.getTime();
+      numEntries++;
+      numSongs++;
     }
     else
       System.out.println("Cannot add a new song: A song already exists");
@@ -70,22 +62,22 @@ public class MediaLib
   
   public static int getNumEntries()
   {
-    return NumEntries;
+    return numEntries;
   }
   
   public static int getNumBooks()
   {
-    return NumBooks;
+    return numBooks;
   }
   
   public static int getNumMovies()
   {
-    return NumMovies;
+    return numMovies;
   }
   
   public static int getNumSongs()
   {
-    return NumSongs;
+    return numSongs;
   }
   
   public String toString() 
@@ -98,8 +90,6 @@ public class MediaLib
       info += "Movie: " + movie + "\n";
     if (song != null)
       info += "Song: " + song + "\n";
-
-    info += "Last Modified: " + lastModified + "\n";
  
     return info;
   }
