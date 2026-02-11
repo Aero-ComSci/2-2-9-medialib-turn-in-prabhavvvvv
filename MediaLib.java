@@ -5,10 +5,10 @@ public class MediaLib
 {
   public static String owner = "Prabhav Yeddanapudi";
   
-  private static int numEntries;
-  private static int numBooks;
-  private static int numMovies;
-  private static int numSongs;
+  private static int NumEntries;
+  private static int NumBooks;
+  private static int NumMovies;
+  private static int NumSongs;
   private String lastModified;
   
   private Book book;
@@ -24,8 +24,8 @@ public class MediaLib
     if (book == null)
     {
       book = b;
-      numEntries++;
-      numBooks++;
+      NumEntries++;
+      NumBooks++;
       lastModified = DateTime.getTime();
     } 
     else
@@ -37,8 +37,8 @@ public class MediaLib
     if (movie == null)
     {
       movie = m;
-      numEntries++;
-      numMovies++;
+      NumEntries++;
+      NumMovies++;
       lastModified = DateTime.getTime();
     }
     else
@@ -50,8 +50,8 @@ public class MediaLib
     if (song == null)
     {
       song = s;
-      numEntries++;
-      numSongs++;
+      NumEntries++;
+      NumSongs++;
       lastModified = DateTime.getTime();
     }
     else
@@ -70,22 +70,22 @@ public class MediaLib
   
   public static int getNumEntries()
   {
-    return numEntries;
+    return NumEntries;
   }
   
   public static int getNumBooks()
   {
-    return numBooks;
+    return NumBooks;
   }
   
   public static int getNumMovies()
   {
-    return numMovies;
+    return NumMovies;
   }
   
   public static int getNumSongs()
   {
-    return numSongs;
+    return NumSongs;
   }
   
   public String toString() 
